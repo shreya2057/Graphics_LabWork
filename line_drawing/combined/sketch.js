@@ -4,8 +4,8 @@ function setup() {
 
 function draw() {
   background(220);
-  check(40,70,190,135);
-  check(40,60,130,120);
+  // check(40,70,190,135);
+  check(40,60,130,150);
 }
 
 function check(x1, y1, x2, y2){
@@ -13,8 +13,10 @@ function check(x1, y1, x2, y2){
   dy = y2-y1;
   if(dx>dy){
     mless(x1, y1, x2, y2);
+    text("m<1", 20, 20);
   }else{
     mgreat(x1, y1, x2, y2);
+    text("m>=1", 20, 20);
   }
 }
 
