@@ -10,11 +10,13 @@ function draw() {
 function dda(x1,y1,x2,y2){
   dx = x2-x1;
   dy = y2-y1;
-  console.log(dx);
+  // console.log(dx);
   if(Math.abs(dx)>Math.abs(dy)){
     stepsize = Math.abs(dx);
   }else{
     stepsize = Math.abs(dy);
+  }
+    console.log(stepsize);
     xi = dx/stepsize;
     yi = dy/stepsize;
     strokeWeight(6);
@@ -31,5 +33,4 @@ function dda(x1,y1,x2,y2){
         point(x1, y1);
       }
     }
-  }
 }

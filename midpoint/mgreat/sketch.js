@@ -3,45 +3,45 @@ function setup() {
 }
 
 function draw() {
-  background(220);
-  mless(70,70,40);
+  background('white');
+  mgreat(30,50,80,110);
 }
 
-function mless(xc,yc, r){
-  x = r;
-  y = 0;
-  point(x+xc, y+yc);
-  pk = 1 - r;
-  while(x>y){
+function mgreat(x1, y1, x2, y2){
+  x = x1;
+  y = y1;
+  strokeWeight(6);
+  point(x, y);
+  point(x2,y2);
+  dx = x2-x1;
+  dy = y2-y1;
+  pk = dx-dy/2;
+  for(i = 1; i<= dy; i++){
     if(pk<0){
-      x = x;
+      x = x ;
       y = y + 1;
-      pk = pk + 2*y + 1;
-        strokeWeight(2);
-        xp = x + xc;
-        yp = y +yc ;
-        point(xp,yp);
-        symmetricPoint(xc, yc, x,y);
+      pk = pk + dx;
+      if(x == x2){
+        strokeWeight(6);
+        point(x,y);
+      }
+      else{
+        strokeWeight(3);
+        point(x,y);
+      }
     }
     else{
-      x = x - 1;
+      x = x + 1;
       y = y + 1;
-      pk = pk + 2*y -2*x +1 ;
-        strokeWeight(2);
-        xp = x + xc;
-        yp = y +yc ;
-        point(xp,yp);
-        symmetricPoint(xc, yc, x,y);
+      pk = pk + dx - dy;
+      if(x == x2){
+        strokeWeight(6);
+        point(x,y);
+      }
+      else{
+        strokeWeight(3);
+        point(x,y);
+      }
     }
   }
-}
-
-function symmetricPoint(xc, yc, x,y){
-  point(x+xc, -y+yc);
-  point(-x+xc, y+yc);
-  point(-x+xc, -y+yc);
-  point(y+yc, x+xc);
-  point(y+yc, -x+xc);
-  point(-y+yc, x+xc);
-  point(-y+yc, -x+xc);  
 }
