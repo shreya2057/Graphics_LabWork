@@ -34,7 +34,6 @@ function x_shear(x1, y1,x2,y2,x3,y3, factor){
   vertex(c[0],c[1]);
   vertex(a[0],a[1]);
   endShape();
-  p = a[0] + 10;
   strokeWeight(0);
   text("x-axis shear", 350 ,350);
   strokeWeight(6);
