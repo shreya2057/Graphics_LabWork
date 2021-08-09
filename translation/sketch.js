@@ -16,9 +16,6 @@ function draw() {
   ];
 
 function translation(x1, y1,x2,y2){
-  x = 10;
-  y = 20;
-  point(x,y);
   strokeWeight(2);
   stroke('black');
   line(x1,y1,x2,y2);
