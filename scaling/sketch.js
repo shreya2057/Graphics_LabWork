@@ -16,8 +16,6 @@ function draw() {
   ];
 
 function scaling(x1, y1,x2,y2){
-  x = 10;
-  y = 20;
   strokeWeight(2);
   stroke('black');
   line(x1,y1,x2,y2);
