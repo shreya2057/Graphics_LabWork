@@ -5,7 +5,6 @@ function setup() {
 function draw() {
   background(220);
   rotation(200,100,70,70);
-  console.log(sint);
 }
 
   angle = 30;
@@ -19,8 +18,6 @@ function draw() {
   ];
 
 function rotation(x1, y1,x2,y2){
-  x = 10;
-  y = 20;
   strokeWeight(2);
   stroke('black');
   line(x1,y1,x2,y2);
