@@ -5,7 +5,7 @@ function setup() {
 function draw() {
   background(220);
   // x_reflect(200,100,70,170);
-  y_reflect(300,100,200,170);
+  y_reflect(170,100,70,170);
 }
 
 function x_reflect(x1, y1,x2,y2){
@@ -22,7 +22,6 @@ function x_reflect(x1, y1,x2,y2){
   stroke('red');
   translate(0,399);
   line(a[0],a[1],b[0],b[1]);
-  strokeWeight(0);
 }
 
 function y_reflect(x1, y1,x2,y2){
@@ -39,7 +38,6 @@ function y_reflect(x1, y1,x2,y2){
   stroke('red');
   translate(370,0);
   line(a[0],a[1],b[0],b[1]);
-  strokeWeight(0);
 }
 
 function multiply(x,y,s){
@@ -58,6 +56,5 @@ function multiply(x,y,s){
       }
     }
   }
-  console.log(product);
   return product;
 }
