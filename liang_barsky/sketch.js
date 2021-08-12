@@ -35,22 +35,22 @@ function draw() {
    //cliping line
    clipLine(x1,y1,x2,y2);
 
-  // //endpoints for line 2
-  // x1 = 350;
-  // y1 = 100;
-  // x2 = 30; 
-  // y2 = 270;
-  // initialLine(x1,y1,x2,y2);
-  // //cliping line
-  // clipLine(x1,y1,x2,y2);
+  //endpoints for line 2
+  x1 = 350;
+  y1 = 100;
+  x2 = 30; 
+  y2 = 270;
+  initialLine(x1,y1,x2,y2);
+  //cliping line
+  clipLine(x1,y1,x2,y2);
 
-  // //endpoints for line 3
-  // x1 = 320;
-  // y1 = 200;
-  // x2 = 200; 
-  // y2 = 240;
-  // initialLine(x1,y1,x2,y2);
-  // clipLine(x1,y1,x2,y2);
+  //endpoints for line 3
+  x1 = 320;
+  y1 = 200;
+  x2 = 200; 
+  y2 = 240;
+  initialLine(x1,y1,x2,y2);
+  clipLine(x1,y1,x2,y2);
 }
 
 function drawWindow(a1,a2,b1,b2,c1,c2,d1,d2){
@@ -98,8 +98,6 @@ function clipLine(x1,y1,x2,y2){
   p.push(p1,p2,p3,p4);
   q.push(q1,q2,q3,q4);
 
-  console.log(p);
-
   r = new Array(0);
   u1k = new Array(0);
   u2k = new Array(0);
@@ -108,7 +106,7 @@ function clipLine(x1,y1,x2,y2){
   for(k = 0; k<4; k++){
     if(p[k]==0 && q[k]<0){
       console.log("The line is rejected");
-      break;
+      return 0;
     }
     else{
       console.log("The line might lie inside");
@@ -122,8 +120,6 @@ function clipLine(x1,y1,x2,y2){
       }
     }
   }
-
-  
 
   u1k.push(0);
   u2k.push(1);
